@@ -1,5 +1,12 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  const allNumber = {};
+  for (const number of array){
+    const targetNumber = target - number;
+    if (targetNumber  in allNumber) return true;
+    allNumber[number] = true;
+}
+return false;
 }
 
 /* 
